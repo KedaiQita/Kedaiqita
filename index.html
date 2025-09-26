@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kedai Qita - Eat & Enjoy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #FFF3E0;
+      color: #333;
+    }
+    header {
+      background: #FFF3E0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #FFF3E0;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #444;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #FFF3E0;
+    }
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #FFF3E0 30%, #FFF3E0 70%);
+      color: #6D4C41;
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .hero a {
+      background: #6D4C41;
+      color: #FFF3E0;
+      padding: 0.8rem 2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .hero a:hover {
+      background: #6D4C41;
+    }
+    .hero img {
+      margin-top: 2rem;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    /* Section umum */
+    section {
+      padding: 4rem 1rem;
+    }
+    section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    /* Menu */
+    .menu-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .menu-item {
+      background: #FFF3E0;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .menu-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .menu-item img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    /* Galeri */
+    .gallery-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+    /* Contact */
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .contact form {
+      flex: 1 1 300px;
+      background: #FFF3E0;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .contact form input,
+    .contact form textarea {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .contact form button {
+      background: #6D4C41;
+      color: #FFF3E0;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .contact form button:hover {
+      background: #FFF3E0;
+    }
+    .contact .info {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+    .contact .info img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    footer {
+      background: #6D4C41;
+      color: #FFF3E0;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">Kedai Qita</div>
+      <ul>
+        <li><a href="#hero">Beranda</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Galeri</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <h1>Welcome to Kedai Qita</h1>
+    <p>Enjoy Every Moment in Kedai Qita.</p>
+    <a href="#menu">Lihat Menu</a>
+  </section>
+  <img src="image/FOTO KEDAI.jpg" alt="Kedai Qita" class="hero-img">
+  <style>
+  .hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+  }
+</style>
+
+  <!-- Menu -->
+  <section id="menu">
+    <h2>Menu Unggulan</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+         <img src="image/guramibaruterbit.png" alt="Gurami Nyat Nyat" class="Menu-img">
+        <h3>Gurami Nyat Nyat</h3>
+        <p>Ikan Gurami dengan bumbu khas Kedai Qita.</p>
+      </div>
+      <div class="menu-item">
+        <img src="image/AYAM BAKAR.jpg" alt="Ayam Bakar">
+        <h3>Ayam Bakar</h3>
+        <p>Ayam bakar dengan sambal khas Kedai Qita.</p>
+      </div>
+      <div class="menu-item">
+        <img src="image/DIMSUM_MENTAI_736x736.jpg" alt="Dimsum Mentai" class="Menu-img">
+        <h3>Dimsum Mentai</h3>
+        <p>Dimsum Mentai ala Kedai Qita.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeri -->
+  <section id="gallery">
+    <h2>Galeri Hidangan</h2>
+    <div class="gallery-grid">
+      <img src="image/guramibaruterbit.png" alt="Gurami Nyat Nyat">
+      <img src="image/AYAM BAKAR.jpg" alt="Ayam Bakar">
+      <img src="image/DIMSUM_MENTAI_736x736.jpg" alt="Dimsum Mentai">
+      <img src="image/TAKOYAKI_736x736.jpg" alt="Takoyaki">
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Hubungi Kami</h2>
+    <div class="contact">
+      <form>
+        <input type="text" placeholder="Nama Anda">
+        <input type="email" placeholder="Email Anda">
+        <textarea rows="4" placeholder="Pesan Anda"></textarea>
+        <button type="submit">Kirim Pesan</button>
+      </form>
+      <div class="info">
+        <img src="image/map.jpg" alt="Lokasi Kedai Qita">
+        <p>Jl. Baru, Duda Timur., Kecamatan Selat, Kabupaten Karangasem, Bali</p>
+        <p>Telepon: (+62) 815 2474 8629</p>
+        <p>Instagram: @kedai_qita18</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2023 Kedai Qita. Semua hak dilindungi.</p>
+    <p>[@kedai_qita18]</p>
+  </footer>
+</body>
+</html>
